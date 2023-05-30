@@ -16,7 +16,6 @@ function HomeLayout1({}: Props) {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getListTop({ page: 1 }));
-
     return () => {};
   }, []);
   return (

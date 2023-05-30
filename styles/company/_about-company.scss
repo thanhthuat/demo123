@@ -6,11 +6,9 @@
     padding: 120px 10px 120px 0px;
   }
 
-   @include res(726px) {
-    padding: 120px 40px ;
+  @include res(726px) {
+    padding: 120px 40px;
   }
-
-
   &-title {
     text-align: center;
     font-size: 40px;
@@ -26,16 +24,16 @@
     }
   }
   &-img {
-     @include res(1200px) {
-        text-align: center;
-      }
+    @include res(1200px) {
+      text-align: center;
+    }
     img {
       max-width: 483px;
       height: auto;
       @include res(1200px) {
         max-width: 100%;
       }
-       @include res(1200px) {
+      @include res(1200px) {
         max-width: 90%;
       }
     }
@@ -45,8 +43,8 @@
     @include res(1200px) {
       max-width: 50%;
     }
-     @include res(726px) {
-     max-width: 100%;
+    @include res(726px) {
+      max-width: 100%;
     }
     &__title {
       font-size: 24px;

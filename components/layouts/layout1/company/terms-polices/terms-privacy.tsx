@@ -54,7 +54,7 @@ const TermsPrivacy = (props: Props) => {
           </div>
         </div>
         <div className="clstermsprivacy-detail">
-          {listInformationSecurity1.slice(0, 11).map((item) => {
+          {listInformationSecurity1.slice(0, 5).map((item) => {
             return (
               <div key={item.id}>
                 <div className="clstermsprivacy-detail__item" id={item.id}>
@@ -62,7 +62,75 @@ const TermsPrivacy = (props: Props) => {
                   {item.content.map((item, index) => {
                     return (
                       <p className="mt-1" key={`${index}-detailitem`}>
-                        {" "}
+                        {item}
+                      </p>
+                    );
+                  })}
+                </div>
+                <div>{item.table?.title}</div>
+                {item?.table && (
+                  <table className="clstermsprivacy-table">
+                    {item?.table.data.map((item, index) => {
+                      return (
+                        <tr key={`${index}-${item.title}`}>
+                          <th>{item.title}</th>
+                          <td>
+                            <ul>
+                              {item.content.map((subitem, index) => {
+                                return <li key={`${subitem}-${index}`}> {subitem}</li>;
+                              })}
+                            </ul>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </table>
+                )}
+              </div>
+            );
+          })}
+          <div key={listInformationSecurity1[5].id}>
+            <div className="clstermsprivacy-detail__item" id={listInformationSecurity1[5].id}>
+              <b>{listInformationSecurity1[5].title}</b>
+              {listInformationSecurity1[5].content.map((item, index) => {
+                return (
+                  <p className="mt-1" key={`${index}-detailitem`}>
+                    {item}
+                  </p>
+                );
+              })}
+            </div>
+            <div>{listInformationSecurity1[5].table?.title}</div>
+            {listInformationSecurity1[5]?.table && (
+              <table className="clstermsprivacy-table">
+                {listInformationSecurity1[5]?.table.data.map((item, index) => {
+                  return (
+                    <tr key={`${index}-${item.title}`}>
+                      <th>{item.title}</th>
+                      <td>
+                        {/* <ul>
+                          {item.content.map((subitem, index) => {
+                            return <li key={`${subitem}-${index}`}> {subitem}</li>;
+                          })}
+                        </ul> */}
+                        {item.content.map((subitem) => {
+                          return <p key={`${subitem}-${index}`}> {subitem}</p>;
+                        })}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </table>
+            )}
+          </div>
+          {listInformationSecurity1.slice(6, 11).map((item) => {
+            return (
+              <div key={item.id}>
+                <div className="clstermsprivacy-detail__item" id={item.id}>
+                  <b>{item.title}</b>
+                  {item.content.map((item, index) => {
+                    return (
+                      <p className="mt-1" key={`${index}-detailitem`}>
                         {item}
                       </p>
                     );
@@ -111,11 +179,15 @@ const TermsPrivacy = (props: Props) => {
                       <tr key={`${item.title}-${index}`}>
                         <th>{item.title}</th>
                         <td>
-                          <ul>
+                          {/* <ul>
                             {item.content.map((subitem) => {
                               return <li key={`${subitem}-${index}`}> {subitem}</li>;
                             })}
-                          </ul>
+                          </ul> */}
+
+                          {item.content.map((subitem) => {
+                            return <p key={`${subitem}-${index}`}> {subitem}</p>;
+                          })}
                         </td>
                       </tr>
                     );
@@ -128,11 +200,12 @@ const TermsPrivacy = (props: Props) => {
                       <tr key={`${item.title}-${index}`}>
                         <th>{item.title}</th>
                         <td>
-                          <ul>
-                            {item.content.map((subitem) => {
+                          {/* {item.content.map((subitem) => {
                               return <li key={`${subitem}-${index}`}> {subitem}</li>;
-                            })}
-                          </ul>
+                            })} */}
+                          {item.content.map((subitem) => {
+                            return <p key={`${subitem}-${index}`}> {subitem}</p>;
+                          })}
                         </td>
                       </tr>
                     );
