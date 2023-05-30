@@ -25,17 +25,17 @@ const ClientComment = (props: Props) => {
         <h2 className="clscoment-title">Comment</h2>
         <div className="clscoment-action">
           <h3> số bình luận 0</h3>
-          <FormControl sx={{ width: "100px" }}>
-            <InputLabel id="demo-simple-select-label">New/Old</InputLabel>
+          <FormControl sx={{ width: "130px" }}>
+            <InputLabel id="demo-simple-select-label">newest/oldest</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={age}
-              label="New/Old"
+              label="newest/oldest"
               onChange={handleChange}
             >
-              <MenuItem value={10}>New</MenuItem>
-              <MenuItem value={20}>Old</MenuItem>
+              <MenuItem value={10}>newest</MenuItem>
+              <MenuItem value={20}>oldest</MenuItem>
             </Select>
           </FormControl>
           {/* <Autocomplete

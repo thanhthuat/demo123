@@ -312,6 +312,9 @@ const FormSigin = ({}) => {
                 </RadioGroup>
               )}
             />
+            <p className="m-1">
+              <b>문의사항</b>
+            </p>
 
             <Controller
               name={"comment"}
@@ -352,14 +355,13 @@ const FormSigin = ({}) => {
                   href="https://www.w3schools.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "red" }}
+                  style={{ color: "" }}
                 >
-                  개인정보처리방침에
+                  <b>개인정보처리방침에</b>
                 </a>
                 동의합니다.
               </p>
             </div>
-
             <button className="clsformnew-button" type="submit" disabled={!firstName}>
               Send
             </button>

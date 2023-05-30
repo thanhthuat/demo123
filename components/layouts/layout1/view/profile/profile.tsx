@@ -6,6 +6,7 @@ import NewsScrap from "./news-scrap";
 import BuyNewsCcrap from "./buy-news-scrap";
 import HeaderCommon from "@components/common/header-common/header-common";
 import Grid from "@mui/material/Grid";
+import BlockBuyNew from "./block-buy-new";
 interface ProfilePageProps {}
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -63,26 +64,7 @@ const ProfilePage: React.FC<ProfilePageProps> = ({}) => {
           <BuyNewsCcrap />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <Grid container spacing={2}>
-            <Grid item xs={4}>
-              UserName
-            </Grid>
-            <Grid item xs={8}>
-              Thanh thuat
-            </Grid>
-            <Grid item xs={4}>
-              Birthday
-            </Grid>
-            <Grid item xs={8}>
-              16/03/1999
-            </Grid>
-            <Grid item xs={4}>
-              Email
-            </Grid>
-            <Grid item xs={8}>
-              thanhthuat@gmail.com
-            </Grid>
-          </Grid>
+          <BlockBuyNew />
         </TabPanel>
       </Box>
     </div>

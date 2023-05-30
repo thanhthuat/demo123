@@ -9,6 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Pagination from "@mui/material/Pagination";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { Button } from "@mui/material";
 type Props = {};
 
 const PdfContent = (props: Props) => {
@@ -52,6 +53,9 @@ const PdfContent = (props: Props) => {
                       <b>제 00{index + 1}호</b>
                     </p>
                     <p className="pdfcontent-item__content">{item.title}</p>
+                    <Button variant="contained" sx={{ marginTop: 2 }}>
+                      E-BOOK
+                    </Button>
                   </div>
                 </div>
               </Grid>

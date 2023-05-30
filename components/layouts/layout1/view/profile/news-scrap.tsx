@@ -13,7 +13,7 @@ const NewsScrap = (props: Props) => {
 
   return (
     <div className="clsnewsscrap">
-      {topmovie.slice(0, 5).map((item, index) => {
+      {topmovie.slice(0, 15).map((item, index) => {
         return (
           <div className="clsbuynewsscrap-item" key={index}>
             <CardRow item={item} sx={{ marginTop: "20px" }} isNewTab={true} />
@@ -52,7 +52,7 @@ const NewsScrap = (props: Props) => {
           </div>
         </div>
       )} */}
-      <Stack direction="row" justifyContent="center" alignItems="center" spacing={2}>
+      <Stack direction="row" justifyContent="center" alignItems="center" spacing={2} width={"100%"}>
         <Pagination count={10} variant="outlined" shape="rounded" sx={{ marginTop: 3 }} />
       </Stack>
     </div>

@@ -25,7 +25,7 @@ interface CategoryNewProps {
 
 const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
   const { topmovie } = useAppSelector((state) => state.movie);
-    const loading = useAppSelector((state) => state.commonReducer.isLoading);
+  const loading = useAppSelector((state) => state.commonReducer.isLoading);
   const dispatch = useAppDispatch();
   const router = useRouter();
 

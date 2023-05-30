@@ -2,6 +2,7 @@ import React from "react";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import Grid from "@mui/system/Unstable_Grid";
 import Checkbox from "@mui/material/Checkbox";
+import { Button, Stack } from "@mui/material";
 type Props = {};
 
 const BlockBuyNew = (props: Props) => {
@@ -58,9 +59,9 @@ const BlockBuyNew = (props: Props) => {
             quảng cáo .
           </p>
         </Grid>
-        <div className="clsblockbuynew-button">
-          <button>chỉnh sửa</button>
-        </div>
+        <Stack direction="row" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>
+          <Button variant="contained">chỉnh sửa</Button>
+        </Stack>
 
         {/* <Grid xs={12} laptop={3}>
           <Grid container rowSpacing={1}>

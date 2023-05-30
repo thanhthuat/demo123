@@ -20,23 +20,25 @@ const BuyNewsCcrap = (props: Props) => {
           </div>
         );
       })} */}
-      { !show && (
+      {!show && (
         <>
           <div className="clsbuynewsscrap-nodata">
             <p>không có news nào scrap . </p>
             <p>vui lòng bảo quản news được quan tâm .</p>
-            <button
-              className="clsbuynewsscrap-buy"
-              onClick={() => {
-                setShow(true);
-              }}
-            >
-              <p>đăng kí mua báo</p>
-            </button>
+            <a href="https://www.w3schools.com" target="_blank">
+              <button
+                className="clsbuynewsscrap-buy"
+                // onClick={() => {
+                //   setShow(true);
+                // }}
+              >
+                <p>đăng kí mua newssletter</p>
+              </button>
+            </a>
           </div>
         </>
       )}
-      {show  && <BlockBuyNew />}
+
       <div className="clsnewsscrap-coppyright">
         <p>
           이용약관 <b>개인정보처리방침</b>
