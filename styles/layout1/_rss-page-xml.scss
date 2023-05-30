@@ -1,5 +1,13 @@
 .clsrsspagexml {
+   @include res(600px) {
+     
+      padding-bottom: 70px;
+    }
   &-content {
+    @include res(600px) {
+      overflow-x: scroll;
+     
+    }
     table {
       font-family: arial, sans-serif;
       border-collapse: collapse;
