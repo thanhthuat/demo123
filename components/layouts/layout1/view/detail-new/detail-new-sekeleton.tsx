@@ -5,6 +5,7 @@ import Skeleton from "@mui/material/Skeleton";
 import Stack from "@mui/material/Stack";
 import BannerAdvertise from "@components/common/banner-advertise/banner-adv";
 import { useAppDispatch, useAppSelector } from "@hook/hooks";
+import HeaderCommon from "@components/common/header-common/header-common";
 
 interface DetailNewSekeletonProps {
   className?: string;
@@ -67,6 +68,7 @@ const DetailNewSekeleton: React.FC<DetailNewSekeletonProps> = ({ className = "" 
           <div className="clsdetailnew-strickly">
             <Skeleton>
               <BoxCategory>
+                <HeaderCommon title="Relationship" />
                 {topmovie.slice(9, 13).map((item) => (
                   <CardRow item={item} key={item.id} />
                 ))}

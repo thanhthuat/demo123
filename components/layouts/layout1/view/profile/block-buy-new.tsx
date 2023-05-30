@@ -27,13 +27,12 @@ const BlockBuyNew = (props: Props) => {
           Tên thiệt của social ID
         </Grid>
         <Grid xs={12} tablet={6} laptop={3}>
-          birthday/Sex
+          birthday/Age
         </Grid>
         <Grid xs={12} tablet={6} laptop={9}>
           22/12/1999 /Male
         </Grid>
-        <Grid xs={12} tablet={6} laptop={3}>
-        </Grid>
+        <Grid xs={12} tablet={6} laptop={3}></Grid>
         <Grid xs={12} tablet={6} laptop={9}>
           <p>
             <Checkbox className={"clsformlogin-input"} size="small" sx={{ marginLeft: -1 }} /> nhận

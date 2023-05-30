@@ -76,6 +76,12 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
               <Link href={"/company/terms-polices/5"}>
                 <li>Hỏi đáp</li>
               </Link>
+              <Link href={"/company/pdf"}>
+                <li>PDF page</li>
+              </Link>
+              <Link href={"/company/rss-page"}>
+                <li>RSS page</li>
+              </Link>
             </ul>
           </div>
           <div className="clsfooterlayout1-category">

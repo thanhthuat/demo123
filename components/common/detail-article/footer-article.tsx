@@ -57,6 +57,19 @@ const FooterArticle: React.FC<FooterArticleProps> = ({ className = "", sx = {} }
           {/* <div style={{ width: "800px" }}>
             <CarouselStory array={topmovie.slice(0, 5)} className="carouseldetail" />
           </div> */}
+          <div className="clsfooterarticle-slice">
+            <div className="clsfooterarticle-slice__itemleft">
+              <div className="clsfooterarticle-slice__button">
+                <button> PREV NEWS</button>
+              </div>
+
+              <p className="mt-1">Best iphone 11 and 11 pro cases for…</p>
+            </div>
+            <div className="clsfooterarticle-slice__item">
+              <button> PREV NEWS</button>
+              <p className="mt-1">East Bengal And Kerala Blasters Have Most Number</p>
+            </div>
+          </div>
           <p className="clsfooterarticle-author__post">
             <strong>Tuấn Hưng </strong>/
             <span className="clsfooterarticle-author__active">

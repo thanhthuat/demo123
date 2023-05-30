@@ -127,6 +127,60 @@
     border-radius: 3px;
     color: #4f4f4f;
   }
+  &-slice {
+    display: flex;
+    margin: 20px 0px;
+    background: #fff;
+    height: 100px;
+    padding: 10px 20px;
+    
+    &__item {
+      flex-basis: 50%;
+      button {
+        background: transparent;
+        border: none;
+        color: #8a8f94;
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      p {
+        @include displayText(2);
+      }
+    }
+    &__button {
+      text-align: left;
+      button {
+        background: transparent;
+        border: none;
+        color: #8a8f94;
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+    &__itemleft {
+      flex-basis: 50%;
+      position: relative;
+      padding-right: 15px;
+      p {
+        @include displayText(2);
+      }
+      &::after {
+        content: "";
+        height: 100%;
+        width: 2px;
+        background: #bdc0c2;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
   &-author {
     text-align: right;
     margin-top: 10px;
@@ -143,6 +197,7 @@
         flex-wrap: wrap;
       }
     }
+
     &__tagitem {
       padding: 8px 7px;
       border: 1px solid #eeeeee;
