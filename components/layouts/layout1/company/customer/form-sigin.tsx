@@ -293,7 +293,7 @@ const FormSigin = ({}) => {
               )}
             />
             <p className="m-1">
-              <b>구독료</b>
+              <b>요금형태</b>
             </p>
             <Controller
               name={"paymment"}

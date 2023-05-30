@@ -1,6 +1,6 @@
 export const data = [
   {
-    title: "매체소개",
+    title: "회사소개",
     submenu: [
       { title: "인사말", url: "" },
       { title: "연락처/주소", url: "contact" },

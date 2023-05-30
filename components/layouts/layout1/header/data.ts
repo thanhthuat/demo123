@@ -13,9 +13,9 @@ export const data = [
   {
     title: "Khoa học IT",
     submenu: [
-      { title: "kĩ thuật khoa học" },
+      { title: "Kĩ thuật-Khoa học" },
       { title: "Công nghệ IT" },
-      { title: "Internet- thông tin" },
+      { title: "Internet-Thông tin" },
     ],
   },
   {
