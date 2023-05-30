@@ -72,7 +72,7 @@ const BlockMainWithTab: React.FC<BlockMainWithTabProps> = ({
                 {(children as React.ReactNode[])?.length > 2 && (children as React.ReactNode[])[4]}
               </>
             ) : (
-              <BoxCategory className="clslistcategory-item2">
+              <BoxCategory className="clslistcategory-item2" sx={{ maxHeight: "460px" }}>
                 {(children as React.ReactNode[])?.length > 2 && (children as React.ReactNode[])[2]}
               </BoxCategory>
             )}
