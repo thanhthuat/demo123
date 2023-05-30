@@ -17,7 +17,7 @@ const NewsScrap = (props: Props) => {
         return (
           <div className="clsbuynewsscrap-item" key={index}>
             <CardRow item={item} sx={{ marginTop: "20px" }} isNewTab={true} />
-            <div>
+            <div className="clsbuynewsscrap-close">
               <CloseIcon sx={{ fontSize: "30px" }}></CloseIcon>
             </div>
           </div>
