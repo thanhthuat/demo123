@@ -23,8 +23,8 @@ const BuyNewsCcrap = (props: Props) => {
       {!show && (
         <>
           <div className="clsbuynewsscrap-nodata">
-            <p>không có news nào scrap . </p>
-            <p>vui lòng bảo quản news được quan tâm .</p>
+            <p>Không có news nào scrap . </p>
+            <p>Vui lòng bảo quản news được quan tâm .</p>
             <a href="https://www.w3schools.com" target="_blank">
               <button
                 className="clsbuynewsscrap-buy"
@@ -32,7 +32,7 @@ const BuyNewsCcrap = (props: Props) => {
                 //   setShow(true);
                 // }}
               >
-                <p>đăng kí mua newssletter</p>
+                <p>Đăng kí mua newsletter</p>
               </button>
             </a>
           </div>

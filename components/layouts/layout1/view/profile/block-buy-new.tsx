@@ -21,30 +21,33 @@ const BlockBuyNew = (props: Props) => {
     <div className="clsblockbuynew">
       <Grid2 container spacing={1}>
         <Grid xs={12} tablet={6} laptop={3}>
-          email
+          Email
         </Grid>
         <Grid xs={12} tablet={6} laptop={9}>
           abcd@gmail.com
         </Grid>
         <Grid xs={12} tablet={6} laptop={3}>
-          nickname
+          Nickname
         </Grid>
         <Grid xs={12} tablet={6} laptop={9}>
-          nickname social ID
+          Nickname social ID
         </Grid>
         <Grid xs={12} tablet={6} laptop={3}>
-          name
+          Name
         </Grid>
         <Grid xs={12} tablet={6} laptop={9}>
-          Tên thiệt của social ID
+          Tên thật của social ID
         </Grid>
         <Grid xs={12} tablet={6} laptop={3}>
-          birthday/Age
+          Birthday/Age
         </Grid>
         <Grid xs={12} tablet={6} laptop={9}>
           22/12/1999 /Male
         </Grid>
-        <Grid xs={12} tablet={6} laptop={3}></Grid>
+        <Grid xs={12} tablet={6} laptop={3}>
+          {" "}
+          Event/mail quảng cáo
+        </Grid>
         <Grid xs={12} tablet={6} laptop={9}>
           <FormControl>
             <FormLabel id="demo-controlled-radio-buttons-group"></FormLabel>
@@ -57,13 +60,13 @@ const BlockBuyNew = (props: Props) => {
               <FormControlLabel
                 value="female"
                 control={<Radio />}
-                label="nhận tin tức đa dạng như event, service mới"
+                label=" Không nhận tin tức đa dạng như event, service mới"
               />
               Ngày từ chối: 22/12/2023
               <FormControlLabel
                 value="male"
                 control={<Radio />}
-                label="nhận tin tức đa dạng như event, service mới"
+                label="Nhận tin tức đa dạng như event, service mới"
               />
               Ngày đồng ý : 22/12/2023
             </RadioGroup>
@@ -75,9 +78,7 @@ const BlockBuyNew = (props: Props) => {
             거부일자 : 2023년04월05일 ngày từ chối
           </p> */}
         </Grid>
-        <Grid xs={12} tablet={6} laptop={3}>
-          event/ mail quảng cáo
-        </Grid>
+        <Grid xs={12} tablet={6} laptop={3}></Grid>
         <Grid xs={12} tablet={6} laptop={9}>
           {/* <p>
             <Checkbox className={"clsformlogin-input"} size="small" sx={{ marginLeft: -1 }} />{" "}
