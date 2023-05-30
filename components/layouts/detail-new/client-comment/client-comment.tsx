@@ -38,11 +38,6 @@ const ClientComment = (props: Props) => {
               <MenuItem value={20}>oldest</MenuItem>
             </Select>
           </FormControl>
-          {/* <Autocomplete
-            options={top100Films}
-            size="small"
-            renderInput={(params) => <TextField {...params} label="News/Old" />}
-          /> */}
         </div>
 
         <Box
