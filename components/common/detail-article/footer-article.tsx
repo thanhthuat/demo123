@@ -66,14 +66,13 @@ const FooterArticle: React.FC<FooterArticleProps> = ({ className = "", sx = {} }
               <p className="mt-1">Best iphone 11 and 11 pro cases for…</p>
             </div>
             <div className="clsfooterarticle-slice__item">
-              <button> PREV NEWS</button>
+              <button> NEXT NEWS</button>
               <p className="mt-1">East Bengal And Kerala Blasters Have Most Number</p>
             </div>
           </div>
           <p className="clsfooterarticle-author__post">
             <strong>Tuấn Hưng </strong>/
             <span className="clsfooterarticle-author__active">
-              {" "}
               <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">
                 18
               </a>

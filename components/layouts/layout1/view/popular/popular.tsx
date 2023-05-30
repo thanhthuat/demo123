@@ -14,13 +14,14 @@ import PopularLoading from "./popular-sekeleton";
 import { createPage } from "@components/dynamic-rendering.service";
 import mockResponse from "@components/dynamic-rendering/dynamic-rendering.mock";
 import mockResponsePopular from "@components/dynamic-rendering/dynamic-rendering-popular.mock";
+import Loading from "@components/common/loading/loading-common";
 interface PopularNewsProps {
   className?: string;
 }
 const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
   const dispatch = useAppDispatch();
   const router = useRouter();
-  const { isLoading } = useAppSelector((state) => state.commonReducer);
+  const loading = useAppSelector((state) => state.commonReducer.isLoading);
   const { topmovie } = useAppSelector((state) => state.movie);
   useEffect(() => {
     dispatch(getListTop({ page: Number(router?.query?.popular) || 2 }));
@@ -30,6 +31,7 @@ const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
     <React.Fragment>
       <div className={`${className} clspopular `}>
         {createPage(mockResponsePopular)}
+        {loading && <Loading />}
         {/* <CategoryHeader />
         <BorderLine />
 

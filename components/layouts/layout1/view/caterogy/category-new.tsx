@@ -18,12 +18,14 @@ import Grid from "@mui/system/Unstable_Grid";
 import { getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
 import { useRouter } from "next/router";
 import HeaderCommon from "@components/common/header-common/header-common";
+import Loading from "@components/common/loading/loading-common";
 interface CategoryNewProps {
   className?: string;
 }
 
 const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
   const { topmovie } = useAppSelector((state) => state.movie);
+    const loading = useAppSelector((state) => state.commonReducer.isLoading);
   const dispatch = useAppDispatch();
   const router = useRouter();
 
@@ -35,8 +37,7 @@ const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
 
   return (
     <div className={`${className} clslistcategory clscontenthomelayout1`}>
-      {/* <CategoryHeader /> */}
-
+      {loading && <Loading />}
       <Box className=" ">
         <HeaderCommon title="Kinh doanh" />
         <Grid container spacing={2}>

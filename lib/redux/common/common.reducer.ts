@@ -1,5 +1,5 @@
-import { createReducer } from '@reduxjs/toolkit';
-import { clearLoading, isLoading } from './common.action';
+import { createReducer } from "@reduxjs/toolkit";
+import { clearLoading, isLoading } from "./common.action";
 
 interface UsersState {
   isLoading: boolean;
