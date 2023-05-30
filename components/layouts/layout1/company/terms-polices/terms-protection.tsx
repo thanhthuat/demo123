@@ -39,7 +39,7 @@ const TermsProtection = (props: Props) => {
               <div key={`${item.id}-${index}`}>
                 <div className="clstermsprotection-detail__item" id={item.id}>
                   <b>
-                    제&nbsp; {index + 1}
+                    {/* 제&nbsp; {index + 1} */}
                     {item.title}
                   </b>
                   {item.content.map((item, index) => {

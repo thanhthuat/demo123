@@ -21,7 +21,7 @@ const TermsEthics = (props: Props) => {
             return (
               <div className="clstermsofuse-detail__item" id={item.id} key={item.id}>
                 <b>
-                  제&nbsp; {index + 1}
+                  {/* 제&nbsp; {index + 1} */}
                   {item.title}
                 </b>
                 {item.content.map((item, index) => {
