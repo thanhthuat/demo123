@@ -12,6 +12,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding-bottom: 0px;
     @include res(400px) {
       flex-direction: column;
     }
@@ -19,12 +20,11 @@
   &-left {
     display: flex;
     align-items: center;
-     @include res(400px) {
-       align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    @include res(400px) {
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
     }
-   
   }
   &-logo {
     .icon-burger {

@@ -16,8 +16,9 @@ import { Controller, useForm } from "react-hook-form";
 
 interface FormLoginProps {
   isLogin?: boolean;
+  onClose: () => void;
 }
-const FormLogin: React.FC<FormLoginProps> = ({ isLogin = true }) => {
+const FormLogin: React.FC<FormLoginProps> = ({ isLogin = true, onClose }) => {
   const form = useForm();
   const { control, handleSubmit } = form;
   const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -87,10 +88,18 @@ const FormLogin: React.FC<FormLoginProps> = ({ isLogin = true }) => {
         </form> */}
 
         <div className="clsformlogin-social">
-          <div className="clsformlogin-social__item naver">N</div>
-          <div className="clsformlogin-social__item talk">Talk</div>
-          <div className="clsformlogin-social__item facebook">F</div>
-          <div className="clsformlogin-social__item google">G</div>
+          <div className="clsformlogin-social__item naver" onClick={onClose}>
+            N
+          </div>
+          <div className="clsformlogin-social__item talk" onClick={onClose}>
+            Talk
+          </div>
+          <div className="clsformlogin-social__item facebook" onClick={onClose}>
+            F
+          </div>
+          <div className="clsformlogin-social__item google" onClick={onClose}>
+            G
+          </div>
         </div>
         <div className="clsformlogin-footer">
           <p>이용약관 개인정보처리방침</p>

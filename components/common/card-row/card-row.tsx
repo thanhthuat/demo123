@@ -18,7 +18,7 @@ interface ICardRowProps {
   className?: string;
   number?: number;
   isReverse?: boolean;
-
+  isNewTab?: boolean;
   sx?: SxProps<Theme>;
 }
 
@@ -32,11 +32,12 @@ const CardRow: React.FC<ICardRowProps> = ({
   isShowNumber = false,
   number = 0,
   isReverse = false,
+  isNewTab = false,
 }) => {
   const { topmovie } = useAppSelector((state) => state.movie);
   return (
     <article className={`${className} clsarticle`}>
-      <Link href={"/detail/123"}>
+      <Link href={"/detail/123"} target={isNewTab ? "_blank" : "_parent"}>
         <Box
           className="clsarticle-content"
           sx={

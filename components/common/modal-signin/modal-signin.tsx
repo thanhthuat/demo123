@@ -70,7 +70,7 @@ const ModalLogin: React.FC<ModalLoginProps> = ({ open, onClose }) => {
           </div>
 
           <Box>
-            <FormLogin />
+            <FormLogin onClose={onClose} />
             {/* <Box sx={{ width: "100%" }}>
               <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
                 <Tabs

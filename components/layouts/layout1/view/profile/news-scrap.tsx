@@ -1,9 +1,8 @@
 import CardRow from "@components/common/card-row/card-row";
 import { useAppDispatch, useAppSelector } from "@hook/hooks";
 import CloseIcon from "@mui/icons-material/Close";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import React from "react";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import Stack from "@mui/material/Stack";
 import { Pagination } from "@mui/material";
 
 type Props = {};
@@ -17,9 +16,9 @@ const NewsScrap = (props: Props) => {
       {topmovie.slice(0, 5).map((item, index) => {
         return (
           <div className="clsbuynewsscrap-item" key={index}>
-            <CardRow item={item} sx={{ marginTop: "20px" }} />
+            <CardRow item={item} sx={{ marginTop: "20px" }} isNewTab={true} />
             <div>
-              <CloseIcon></CloseIcon>
+              <CloseIcon sx={{ fontSize: "30px" }}></CloseIcon>
             </div>
           </div>
         );
@@ -53,7 +52,9 @@ const NewsScrap = (props: Props) => {
           </div>
         </div>
       )} */}
-      <Pagination count={10} variant="outlined" shape="rounded" />
+      <Stack direction="row" justifyContent="center" alignItems="center" spacing={2}>
+        <Pagination count={10} variant="outlined" shape="rounded" sx={{ marginTop: 3 }} />
+      </Stack>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import NewsScrap from "./news-scrap";
 import BuyNewsCcrap from "./buy-news-scrap";
+import HeaderCommon from "@components/common/header-common/header-common";
 interface ProfilePageProps {}
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -41,6 +42,7 @@ const ProfilePage: React.FC<ProfilePageProps> = ({}) => {
   return (
     <div>
       <Box sx={{ width: "100%" }}>
+        <HeaderCommon title="My Page" />
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             variant="fullWidth"

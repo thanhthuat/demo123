@@ -14,6 +14,7 @@ import apiConfig from "apis/apiConfig";
 import Image from "next/image";
 import Link from "next/link";
 import { useAppSelector, useWindowDimensions } from "@hook/hooks";
+import HeaderCommon from "../header-common/header-common";
 interface CarouselTwoProps {
   className?: string;
   sx?: SxProps<Theme>;
@@ -26,61 +27,64 @@ const CarouselTwo: React.FC<CarouselTwoProps> = ({ className = "", sx = {}, list
   const size = useWindowDimensions();
 
   return (
-    <Box className={`${className} clscarouselthumbs`} sx={{ ...sx }}>
-      <Swiper
-        spaceBetween={10}
-        navigation={true}
-        loop={true}
-        direction={"vertical"}
-        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
-      >
-        {listItem.map((item, index) => (
-          <SwiperSlide key={item.id}>
-            <Link href={`/detail/${item.id}`}>
-              <Image
-                src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : ""}
-                alt={item?.title || "img"}
-                width="1024"
-                height="750"
-              ></Image>
-            </Link>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <Swiper
-        watchSlidesProgress
-        onSwiper={setThumbsSwiper}
-        slidesPerView={size?.width! > 980 ? 2 : 2}
-        freeMode={true}
-        direction={size?.width! > 980 ? "vertical" : "horizontal"}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
-        breakpoints={{
-          // when window width is >= 320px
-          320: {
-            slidesPerView: 2,
-          },
-          // when window width is >= 480px
-          480: {
-            slidesPerView: 2,
-          },
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 2,
-          },
-        }}
-      >
-        {listItem.map((item, index) => (
-          <SwiperSlide key={item.id}>
-            <Link href={`/detail/${item.id}`}>
-              <CardItemCarousel item={item} />
-            </Link>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </Box>
+    <React.Fragment>
+      <HeaderCommon title="Top News" />
+      <Box className={`${className} clscarouselthumbs`} sx={{ ...sx }}>
+        <Swiper
+          spaceBetween={10}
+          navigation={true}
+          loop={true}
+          direction={"vertical"}
+          thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className="mySwiper2"
+        >
+          {listItem.map((item, index) => (
+            <SwiperSlide key={item.id}>
+              <Link href={`/detail/${item.id}`}>
+                <Image
+                  src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : ""}
+                  alt={item?.title || "img"}
+                  width="1024"
+                  height="750"
+                ></Image>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <Swiper
+          watchSlidesProgress
+          onSwiper={setThumbsSwiper}
+          slidesPerView={size?.width! > 980 ? 2 : 2}
+          freeMode={true}
+          direction={size?.width! > 980 ? "vertical" : "horizontal"}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className="mySwiper"
+          breakpoints={{
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 2,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 2,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 2,
+            },
+          }}
+        >
+          {listItem.map((item, index) => (
+            <SwiperSlide key={item.id}>
+              <Link href={`/detail/${item.id}`}>
+                <CardItemCarousel item={item} />
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Box>
+    </React.Fragment>
   );
 };
 export default CarouselTwo;

@@ -6,6 +6,7 @@ import { useAppSelector } from "@hook/hooks";
 import Box from "@mui/material/Box";
 import Grid from "@mui/system/Unstable_Grid";
 import { SxProps, Theme } from "@mui/material/styles";
+import HeaderCommon from "../header-common/header-common";
 interface BoxCaterogryColumnProps {
   className?: string;
   children: React.ReactNode;
@@ -21,6 +22,7 @@ const BoxCategoryColumn: React.FC<BoxCaterogryColumnProps> = ({ className = "", 
   const { topmovie } = useAppSelector((state) => state.movie);
   return (
     <section className={`${className} clsboxcolumn`}>
+      <HeaderCommon title="Popular" />
       <div className={` clsboxcolumn-content`}>
         <Grid container spacing={1}>
           <Grid tablet={6} tablet1={4}>

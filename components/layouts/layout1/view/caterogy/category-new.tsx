@@ -64,7 +64,8 @@ const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
             }}
           ></Divider>
           <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} xs>
-            <BoxCategory className="clslistcategory-item2">
+            <BoxCategory className="clslistcategory-item2" sx={{ maxHeight: "615px" }}>
+              <HeaderCommon title="Top News" />
               {topmovie.slice(12, 20).map((item) => (
                 <CardRow className="border" item={item} key={item.title} isAuthor={true} />
               ))}
