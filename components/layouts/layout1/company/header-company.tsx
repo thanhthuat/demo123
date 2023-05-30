@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { data } from "./introduce/data";
 import Link from "next/link";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import CloseIcon from "@mui/icons-material/Close";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";

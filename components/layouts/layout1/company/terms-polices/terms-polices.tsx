@@ -10,6 +10,7 @@ import TermsEthics from "./terms-ethics";
 import TermsCoppyright from "./terms-coppyright";
 import TermsPremission from "./terms-premission";
 import { useRouter } from "next/router";
+import { useWindowDimensions } from "@hook/hooks";
 type Props = {};
 interface ProfilePageProps {}
 interface TabPanelProps {
@@ -42,7 +43,7 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box sx={{ pt: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -56,7 +57,7 @@ function a11yProps(index: number) {
 const TermsPolices = (props: Props) => {
   const [value, setValue] = React.useState(0);
   const router = useRouter();
-
+  const size = useWindowDimensions();
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
@@ -73,13 +74,16 @@ const TermsPolices = (props: Props) => {
         <div className="clstermspolices-title">
           <h1 className="clstermspolices-title__h1">이메일무단수집거부</h1>
         </div>
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ minWidth: {} }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs
-              variant="fullWidth"
               value={value}
               onChange={handleChange}
-              aria-label="basic tabs example"
+              // variant="fullWidth"
+              variant={size.width! > 900 ? "fullWidth" : "scrollable"}
+              scrollButtons
+              allowScrollButtonsMobile
+              aria-label="scrollable force tabs example"
               TabIndicatorProps={{
                 style: {
                   backgroundColor: "#ffd966",

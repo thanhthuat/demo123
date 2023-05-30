@@ -1,17 +1,21 @@
 .clstermsofuse {
-    
-
   &-overview {
     width: 100%;
     border: 2px solid #eeeeee;
     display: flex;
     padding: 10px 50px;
+    @include res(600px) {
+      padding: 10px 20px;
+    }
+    @include res(450px) {
+      flex-direction: column;
+    }
     ul {
       flex-basis: 50%;
     }
     ul > li {
       cursor: pointer;
-      &:hover{
+      &:hover {
         color: rgb(217, 125, 84);
       }
     }

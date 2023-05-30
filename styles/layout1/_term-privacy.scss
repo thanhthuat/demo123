@@ -1,5 +1,4 @@
 .clstermsprivacy {
- 
   &-privacy {
     width: 100%;
     border: 2px solid #eeeeee;
@@ -13,6 +12,12 @@
     // border: 2px solid #eeeeee;
     display: flex;
     padding: 10px 50px;
+    @include res(768px) {
+      flex-direction: column;
+    }
+    @include res(600px) {
+      padding: 10px 20px;
+    }
     ul {
       flex-basis: 50%;
     }
@@ -48,6 +53,9 @@
       border: 1px solid #dddddd;
       border-left: none;
       padding: 8px;
+      @include res(768px) {
+        width: unset;
+      }
       width: 300px;
     }
   }

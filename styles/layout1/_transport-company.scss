@@ -1,13 +1,33 @@
 .clstransportcompany {
   padding: 50px 0px 100px 0px;
+  @include res(768px) {
+    padding: 20px 0px 50px 0px;
+  }
+  @include res(330px) {
+    padding: 20px 0px 80px 0px;
+  }
   &-content {
     display: flex;
     padding: 10px 20px;
+    @include res(768px) {
+      flex-direction: column;
+    }
   }
   &-adress {
     flex-basis: 50%;
+    padding-right: 50px;
+    @include res(768px) {
+      margin-bottom: 50px;
+      padding-right: 0px;
+    }
     &__box {
       width: 420px;
+      @include res(886px) {
+        width: 370px;
+      }
+      @include res(400px) {
+        width: 100%;
+      }
     }
     p {
       font-size: 25px;

@@ -1,5 +1,4 @@
 .clstermscoppyright {
-  
   &-coppyright {
     width: 100%;
     border: 2px solid #eeeeee;
@@ -13,8 +12,14 @@
     // border: 2px solid #eeeeee;
     display: flex;
     padding: 10px 50px;
+    @include res(600px) {
+      padding: 10px 20px;
+    }
     ul {
       flex-basis: 50%;
+      @include res(600px) {
+        flex-basis: 100%;
+      }
     }
     ul > li {
       cursor: pointer;
@@ -49,6 +54,9 @@
       border-left: none;
       padding: 8px;
       width: 300px;
+      @include res(768px) {
+        width: unset;
+      }
     }
   }
 }

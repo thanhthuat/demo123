@@ -1,12 +1,27 @@
 .clshandlepolicy {
+  padding: 10px 5px;
   &-content {
     width: 900px;
+    @include res(920px) {
+      width: 100%;
+    }
+    @include res(400px) {
+      padding-bottom: 75px;
+    }
   }
   &-body {
     display: flex;
+    @include res(768px) {
+      flex-direction: column;
+    }
   }
   &-description {
     flex-basis: 50%;
+    padding-top: 20px;
+    @include res(768px) {
+      padding: 20px 0px;
+      margin-bottom: 25px;
+    }
   }
   &-title {
     text-align: center;

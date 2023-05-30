@@ -1,7 +1,13 @@
 .clscontactadvertis {
   padding: 10px 0px;
+  @include res(920px) {
+    padding: 10px 5px;
+  }
   &-content {
     width: 900px;
+    @include res(920px) {
+      width: 100%;
+    }
   }
   &-title {
     margin: 12px 0px;
@@ -12,10 +18,19 @@
   &-contact {
     display: flex;
     width: 100%;
+    @include res(768px) {
+      flex-direction: column;
+    }
     &__des {
       width: 100%;
       //text-align: center;
       padding-right: 50px;
+      @include res(768px) {
+        padding-right: 0px;
+        padding-bottom: 50px;
+        margin-bottom: 20px;
+      }
+
       b {
         font-size: 30px;
       }
@@ -23,6 +38,16 @@
         font-size: 23px;
         margin-top: 15px;
         padding-top: 10px;
+      }
+      @include res(600px) {
+        b {
+          font-size: 25px;
+        }
+        p {
+          font-size: 20px;
+          margin-top: 15px;
+          padding-top: 10px;
+        }
       }
     }
     &__phone {
