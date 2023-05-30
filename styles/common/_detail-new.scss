@@ -8,12 +8,19 @@
     &__detail {
       display: flex;
       align-items: center;
+      @include res(600px) {
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+      }
       .author,
       .time,
       .view {
         display: flex;
         align-items: center;
         padding: 0px 10px;
+        @include res(400px) {
+          font-size: 13px;
+        }
       }
       .author {
         span {
@@ -57,10 +64,16 @@
         justify-content: center;
         margin-left: 4px;
         color: #999999;
+        @include res(400px) {
+          height: 32px;
+          width: 32px;
+        }
       }
     }
     @include res(600px) {
       justify-content: flex-end;
+      flex-direction: column;
+      align-items: flex-start;
       .cls-BreadCrumb {
         display: none;
       }
