@@ -60,11 +60,14 @@ const TermsProtection = (props: Props) => {
                         <tr key={`${index}-${item.title}`}>
                           <th>{item.title}</th>
                           <td>
-                            <ul>
+                            {/* <ul>
                               {item.content.map((subitem, index) => {
                                 return <li key={`${index}-itemsub`}> {subitem}</li>;
                               })}
-                            </ul>
+                            </ul> */}
+                            {item.content.map((subitem, index) => {
+                              return <p key={`${index}-itemsub`}> {subitem}</p>;
+                            })}
                           </td>
                         </tr>
                       );

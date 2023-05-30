@@ -24,7 +24,7 @@ const TermsCoppyright = (props: Props) => {
                       smooth={true}
                       duration={500}
                     >
-                      {index + 1}&nbsp;
+                      {/* {index + 1}&nbsp; */}
                       {item.title}
                     </Link>
                   </li>
@@ -55,11 +55,14 @@ const TermsCoppyright = (props: Props) => {
                         <tr key={`index-${index}`}>
                           <th>{item.title}</th>
                           <td>
-                            <ul>
+                            {item.content.map((subitem, index) => {
+                              return <li key={`index-${index + 1}`}> {subitem}</li>;
+                            })}
+                            {/* <ul>
                               {item.content.map((subitem, index) => {
                                 return <li key={`index-${index + 1}`}> {subitem}</li>;
                               })}
-                            </ul>
+                            </ul> */}
                           </td>
                         </tr>
                       );
